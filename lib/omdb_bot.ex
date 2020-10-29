@@ -18,7 +18,7 @@ defmodule OMDBBot do
     %Query{
       operation: :create_film,
       variables:
-        Map.drop(data, [:name, :production_date, :omdb_id])
+        Map.drop(data, [:name, :production_date])
         |> Map.put(:label, label)
         |> Enum.into([]),
       fields: [:uid]
